@@ -1,0 +1,11 @@
+进入 env 安装 django：
+    pip install django==1.11.8
+创建 django 工程：
+    django-admin startproject mysite
+新建一个应用 learn:
+    python manage.py startapp learn
+把创建的 learn 放到 /mysite/settings 中
+
+修改 /learn/views:
+    返回 "hello word"
+修改 /learn/urls:
