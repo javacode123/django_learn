@@ -20,6 +20,8 @@ from learn import views as learn_views  # new
 
 urlpatterns = [
     url(r'^$', learn_views.index),  # new
-
+    url(r'^add/$', learn_views.add, name='add'),  # 配置 url
+    # (\d+) 一个或者多个数字
+    url(r'^add/(\d+)/(\d+)/$', learn_views.add2, name='add2'),  # 配置 url
     url(r'^admin/', admin.site.urls),
 ]
