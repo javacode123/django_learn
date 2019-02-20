@@ -10,3 +10,6 @@
     返回 "hello word"
 修改 /learn/urls:
     根据访问 url 映射到 views 中的方法
+
+
+python manage.py runserver 运行项目
