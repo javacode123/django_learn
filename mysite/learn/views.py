@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse(u"hello word")
-
+    # 自动查找 app 下的 templates 中的文件
+    return render(request, 'home.html')
 
 # ?a=9&b=9
 def add(request):
