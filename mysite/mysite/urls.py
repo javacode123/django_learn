@@ -19,6 +19,7 @@ from django.contrib import admin
 from learn import views as learn_views  # new
 
 urlpatterns = [
+    url(r'^get/$', learn_views.get_model, name='get'),  # 获取 model
     url(r'^$', learn_views.index, name='home'),  # new
     url(r'^add/$', learn_views.add, name='add'),  # 配置 url
     # (\d+) 一个或者多个数字

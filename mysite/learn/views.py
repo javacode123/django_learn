@@ -4,6 +4,12 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
+def get_model(request):
+    name = request.GET.get('name', 'zjl')  # 设置默认值
+    print name
+    return HttpResponse(name)
+
+
 def index(request):
     # 自动查找 app 下的 templates 中的文件
     msg = u'我在学习 django!'  # 字符渲染
