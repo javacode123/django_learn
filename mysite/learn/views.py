@@ -6,7 +6,10 @@ from django.shortcuts import render
 
 def index(request):
     # 自动查找 app 下的 templates 中的文件
-    return render(request, 'home.html')
+    msg = u'我在学习 django!'  # 字符渲染
+    for_msg = ['java', 'python', 'c++']
+    return render(request, 'home.html', {'msg': msg, 'for_msg': for_msg})
+
 
 # ?a=9&b=9
 def add(request):
